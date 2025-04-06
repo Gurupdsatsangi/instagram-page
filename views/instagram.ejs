@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    header {
+      
+    padding: 16px;
+    background-color: #111;
+    z-index: 3;
+    
+  }
+ .nav-detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    max-width: 935px;
+    margin: 0 auto;
+ }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #3897f0;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #2c82d3;
+  }
+  .profile-header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .main{
+        padding-left: 200px ;
+        padding-right: 100px;
+        padding-top: 75px;
+        height: 350px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      border-radius: 50%;
+      margin-right: 20px;
+      background-color: #fff;
+     
+    }
+
+    .profile-info {
+        padding-left: 50px ;
+      flex: 1;
+    }
+
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .profile-top h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .verified {
+      color: #3897f0;
+      font-size: 18px;
+    }
+
+    .profile-top button {
+      padding: 6px 14px;
+      background-color: #262626;
+      color: white;
+      border: 1px solid #333;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .profile-top button:hover {
+      background-color: #333;
+    }
+
+    .stats {
+      margin: 10px 0;
+    }
+
+    .stats span {
+      margin-right: 20px;
+    }
+
+    .bio {
+      font-size: 14px;
+    }
+
+    .bio a {
+      color: #3897f0;
+      text-decoration: none;
+    }
+    
+   </style>
+</head>
+<body>
+    <header>
+        <div class="nav-detail">
+        <div class="logo">Instagram</div>
+        <div class="nav-buttons">
+          <button>Log In</button>
+          <button>Sign Up</button>
+        </div>
+    </div>
+      </header>
+      <div class="main">
+      <section class="profile-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="profile-pic" alt="Facebook Profile Pic" />
+        <div class="profile-info">
+          <div class="profile-top">
+            <h1>facebook</h1>
+            <span class="verified">✔</span>
+            <button>Follow</button>
+            <button>Message</button>
+          </div>
+          <div class="stats">
+            <span><strong>1,337</strong> posts</span>
+            <span><strong>5.9M</strong> followers</span>
+            <span><strong>28</strong> following</span>
+          </div>
+          <div class="bio">
+            <strong>Facebook</strong><br />
+            We believe people can do more together than alone and that each of us plays an important role in helping to create this...<br />
+            <a href="https://fb.me/HowToContactFB">fb.me/HowToContactFB</a>
+          </div>
+        </div>
+        </section>
+    </div>
+</body>
+</html>
