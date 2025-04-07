@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>instagram</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
    <style>
     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color:#111;
   }
     header {
       
@@ -50,10 +53,11 @@
       flex-wrap: wrap;
     }
     .main{
-        padding-left: 200px ;
+        padding-left: 150px ;
         padding-right: 100px;
         padding-top: 75px;
         height: 350px;
+        color: #fff;
     }
 
     .profile-pic {
@@ -116,6 +120,27 @@
       color: #3897f0;
       text-decoration: none;
     }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .tabs {
+      display: flex;
+      gap: 20px;
+      margin:  0;
+      border-top: 1px solid #333;
+      padding-top: 10px;
+      justify-content:center ;
+    }
+    
+  
+    .post img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
     
    </style>
 </head>
@@ -130,7 +155,7 @@
     </div>
       </header>
       <div class="main">
-      <section class="profile-header">
+      <div class="profile-header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="profile-pic" alt="Facebook Profile Pic" />
         <div class="profile-info">
           <div class="profile-top">
@@ -149,8 +174,38 @@
             We believe people can do more together than alone and that each of us plays an important role in helping to create this...<br />
             <a href="https://fb.me/HowToContactFB">fb.me/HowToContactFB</a>
           </div>
+          
+          
+          </div>
         </div>
+        </div>
+
+        <section class="tabs">
+         
+          <div class="container text-center my-4">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+              <label class="btn btn-secondary me-3" for="btnradio1">Posts</label>
+              
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+              <label class="btn btn-secondary me-3" for="btnradio2">reels</label>
+              
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+              <label class="btn btn-secondary" for="btnradio3">Tagged</label>
+              
+            </div>
+          </div>
+          
+        
         </section>
+
+        <div class="gallery">
+          <div class="post"><img src="https://via.placeholder.com/300x300?text=Post+1" alt="Post 1" /></div>
+          <div class="post"><img src="https://via.placeholder.com/300x300?text=Post+2" alt="Post 2" /></div>
+          <div class="post"><img src="https://via.placeholder.com/300x300?text=Post+3" alt="Post 3" /></div>
+        
+      
     </div>
 </body>
 </html>
