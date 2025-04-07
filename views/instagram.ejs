@@ -18,6 +18,7 @@
     padding: 16px;
     background-color: #111;
     z-index: 3;
+    border-bottom: 1px solid #333;
     
   }
  .nav-detail{
@@ -124,6 +125,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
+
     }
     .tabs {
       display: flex;
@@ -137,7 +139,7 @@
   
     .post img {
       width: 100%;
-      height: auto;
+      height: 600px;
       display: block;
       border-radius: 10px;
     }
@@ -156,23 +158,23 @@
       </header>
       <div class="main">
       <div class="profile-header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="profile-pic" alt="Facebook Profile Pic" />
+        <img src="<%=data.logo%>" class="profile-pic" alt="Facebook Profile Pic" />
         <div class="profile-info">
           <div class="profile-top">
-            <h1>facebook</h1>
+            <h1><%= data.name %></h1>
             <span class="verified">✔</span>
             <button>Follow</button>
             <button>Message</button>
           </div>
           <div class="stats">
-            <span><strong>1,337</strong> posts</span>
-            <span><strong>5.9M</strong> followers</span>
-            <span><strong>28</strong> following</span>
+            <span><strong><%data.tpost%></strong> posts</span>
+            <span><strong><%=data.followers%></strong> followers</span>
+            <span><strong><%=data.following%></strong> following</span>
           </div>
           <div class="bio">
-            <strong>Facebook</strong><br />
-            We believe people can do more together than alone and that each of us plays an important role in helping to create this...<br />
-            <a href="https://fb.me/HowToContactFB">fb.me/HowToContactFB</a>
+            <strong><%= data.name %></strong><br />
+           <%=data.p%><br />
+            <a href="<%=data.contact%>">fb.me/HowToContactFB</a>
           </div>
           
           
@@ -201,9 +203,9 @@
         </section>
 
         <div class="gallery">
-          <div class="post"><img src="https://via.placeholder.com/300x300?text=Post+1" alt="Post 1" /></div>
-          <div class="post"><img src="https://via.placeholder.com/300x300?text=Post+2" alt="Post 2" /></div>
-          <div class="post"><img src="https://via.placeholder.com/300x300?text=Post+3" alt="Post 3" /></div>
+          <% for(let post of data.posts){%>
+          <div class="post"><img src="<%=post.image%>" alt="Post 1" /></div>
+          <%}%>
         
       
     </div>
